@@ -1,0 +1,16 @@
+<header>
+    <img class="logo" src="" alt="logo">
+    <nav>
+        <ul class="nav_links" [ngClass]="{ 'nav_active': isNavActive }">
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <a class="cta" href="#"><button>Contact</button></a>
+    <div class="hamburger" (click)="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
