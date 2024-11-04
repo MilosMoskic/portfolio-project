@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +8,6 @@
 li,
 a,
 button {
-  font-family: "Monserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: #ecf0f1;

@@ -1,0 +1,120 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  padding: 0 20px; /* Padding to add space on smaller screens */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 70px auto 0;
+  padding: 40px 20px; /* Add padding to adjust positioning */
+  flex-direction: row; /* Default: side-by-side layout */
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #0088a9;
+}
+
+.text-section {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.text-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #ecf0f1;
+  text-align: justify;
+  transition: all 0.3s ease 0s;
+}
+
+.text-section h1:hover{
+    color: #0088a9;
+}
+
+.text-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #ecf0f1;
+  text-align: justify;
+}
+
+/* Media query for smaller screens (e.g., 360x800) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center; /* Center-align text */
+    padding: 10px;
+  }
+
+  .image-section {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .profile-image {
+    width: 180px; /* Reduce image size */
+    height: 180px;
+  }
+
+  .text-section {
+    padding-left: 0;
+  }
+
+  .text-section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .text-section p {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* Media query for medium screens (e.g., 1366x768) */
+@media (min-width: 769px) and (max-width: 1366px) {
+  .container {
+    max-width: 90%; /* Adjust container width */
+    padding: 20px;
+  }
+
+  .profile-image {
+    width: 200px; /* Adjust image size */
+    height: 200px;
+  }
+
+  .text-section h1 {
+    font-size: 2.25rem;
+  }
+
+  .text-section p {
+    font-size: 1.05rem;
+  }
+}
