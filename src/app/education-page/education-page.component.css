@@ -1,0 +1,63 @@
+.education {
+  padding: 40px;
+  background-color: #24252a;
+  color: #ecf0f1;
+  text-align: center;
+}
+
+.education h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  width: 80%; /* Wider list container */
+  max-width: 1000px; /* Limits maximum width for large screens */
+  margin: 0 auto; /* Centers the list */
+}
+
+.education-item {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.education-logo {
+  width: 100px; /* Increased size for the logo */
+  height: auto;
+  margin-right: 25px;
+  border-radius: 8px;
+}
+
+.education-details {
+  background-color: #333;
+  flex: 1;
+}
+
+.education-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ecf0f1;
+  background-color: #333;
+}
+
+.education-details p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  color: #b0bec5;
+  background-color: #333;
+}
+
+.education-details strong a {
+  color: #ecf0f1;
+  background-color: #333;
+}
