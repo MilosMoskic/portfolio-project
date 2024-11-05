@@ -1,0 +1,101 @@
+.experience {
+  padding: 40px;
+  background-color: #555; /* Slightly different background color */
+  color: #ecf0f1;
+  text-align: center;
+}
+
+.experience h2 {
+  font-size: 2.5rem; /* Slightly larger font size */
+  margin-bottom: 30px;
+  background-color: #555;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  width: 80%; /* Wider list container */
+  max-width: 1000px; /* Limits maximum width for large screens */
+  margin: 0 auto; /* Centers the list */
+  background-color: #555;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  background-color: #333; /* Different shade for item background */
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+  text-align: left;
+  background-color: #24252a;
+}
+
+.experience-logo {
+  width: 100px; /* Logo size */
+  height: auto;
+  margin-right: 25px;
+  border-radius: 8px;
+}
+
+.experience-details {
+  flex: 1;
+}
+
+.experience-details h3 {
+  font-size: 1.8rem; /* Slightly larger title */
+  margin-bottom: 10px;
+  color: #ecf0f1;
+}
+
+.experience-details p {
+  font-size: 1.1rem; /* Same font size for description */
+  margin: 8px 0;
+  color: #b0bec5;
+}
+
+.experience-details strong a {
+  color: #ecf0f1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .experience-list {
+    width: 90%; /* Wider list container on smaller screens */
+  }
+
+  .experience-item {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+    padding: 20px; /* Reduce padding */
+  }
+
+  .experience-logo {
+    margin-bottom: 15px; /* Space between logo and details */
+  }
+
+  .experience-details h3 {
+    font-size: 1.5rem; /* Smaller title */
+  }
+
+  .experience-details p {
+    font-size: 1rem; /* Smaller description */
+  }
+}
+
+@media (max-width: 480px) {
+  .experience h2 {
+    font-size: 2rem; /* Smaller header */
+  }
+
+  .experience-details h3 {
+    font-size: 1.4rem; /* Smaller title */
+  }
+
+  .experience-details p {
+    font-size: 0.9rem; /* Smaller description */
+  }
+}

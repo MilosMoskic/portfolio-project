@@ -13,7 +13,7 @@ export class EducationService {
       institution: 'Technical Faculty "Mihajlo Pupin"',
       institutionUrl: 'http://147.91.177.109/',
       location: 'Zrenjanin, Serbia',
-      educationStartDate: 'October, 2024',
+      educationStartDate: 'October 2024',
       graduationDate: 'Present',
       logoUrl: '././assets/tfzr.jpg',
     },
