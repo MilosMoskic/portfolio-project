@@ -27,11 +27,12 @@ header {
 
 .nav_links {
   list-style: none;
+  display: flex; /* Horizontal alignment */
+  gap: 20px; /* Initial spacing */
 }
 
 .nav_links li {
   display: inline-block;
-  padding: 0px 20px;
 }
 
 .nav_links li a {
@@ -55,42 +56,51 @@ button:hover {
   background-color: rgba(0, 136, 169, 0.8);
 }
 
-/* Hamburger Menu */
-.hamburger {
-  display: none; /* hidden by default */
-  cursor: pointer;
-  flex-direction: column;
-}
-
-.hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px;
-  background: #ecf0f1;
-}
-
+/* Responsive styles for screens up to 768px */
 @media (max-width: 768px) {
+  header {
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center-align items */
+    padding: 20px 5%;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
   .nav_links {
-    display: none; /* hidden on small screens */
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 10%;
-    background-color: #24252a;
-    width: 100%;
-    padding: 20px;
+    gap: 15px; /* Reduced spacing between links for tablet */
   }
 
-  .nav_links.nav_active {
-    display: flex; /* display on toggle */
+  button {
+    padding: 8px 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Responsive styles for mobile devices (480px and below) */
+@media (max-width: 480px) {
+  header {
+    flex-wrap: wrap;
+    padding: 15px 5%;
   }
 
-  .cta {
-    display: none;
+  .logo {
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 
-  .hamburger {
-    display: flex; /* show hamburger icon on small screens */
+  .nav_links {
+    gap: 25px; /* Increase spacing between links for mobile */
+    justify-content: center; /* Keep links horizontally centered */
+  }
+
+  .nav_links li a {
+    margin: 0 5px; /* Add slight margin for visual balance */
+  }
+
+  button {
+    padding: 10px 20px; /* Maintain comfortable button size */
+    font-size: 14px;
+    margin-top: 10px; /* Add spacing between button and links */
   }
 }

@@ -6,11 +6,12 @@ import { ProjectsPageComponent } from "./projects-page/projects-page.component";
 import { EducationPageComponent } from './education-page/education-page.component';
 import { ExperiencePageComponent } from "./experience-page/experience-page.component";
 import { FooterComponent } from "./footer/footer.component";
+import { ContactFormComponent } from "./contact-form/contact-form.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FrontPageComponent, ProjectsPageComponent, EducationPageComponent, ExperiencePageComponent, FooterComponent],
+  imports: [ HeaderComponent, FrontPageComponent, ProjectsPageComponent, EducationPageComponent, ExperiencePageComponent, FooterComponent, ContactFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
