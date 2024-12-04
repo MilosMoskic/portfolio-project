@@ -1,11 +1,23 @@
 <header>
-    <img class="logo" src="" alt="logo">
-    <nav>
-        <ul class="nav_links" [ngClass]="{ 'nav_active': isNavActive }">
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Experience</a></li>
+    <div class="navbar">
+        <div class="logo"><a href="#">Mole <img src="./assets/serbia.png" alt="Serbia" class="serbia"></a></div>
+        <ul class="links">
+            <li><a href="#" (click)="showSection('front-page')">Portfolio</a></li>
+            <li><a href="#" (click)="showSection('projects')">Projects</a></li>
+            <li><a href="#" (click)="showSection('education')">Education</a></li>
+            <li><a href="#" (click)="showSection('experience')">Experience</a></li>
         </ul>
-    </nav>
-    <a class="cta" href="#"><button>Contact</button></a>
+        <a href="#" (click)="showSection('contact')" class="action_btn">Contact Me</a>
+        <div class="toggle_btn" (click)="toggleMenu()">
+            <i [class]="toggleIcon"></i>
+        </div>
+    </div>
+
+    <div class="dropdown_menu" [class.open]="isMenuOpen">
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#" class="action_btn">Contact Me</a></li>
+    </div>
 </header>

@@ -1,26 +1,23 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  color: #333;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh; /* Ensure body height matches viewport */
   background-color: #f4f4f9;
-  padding: 0 20px; /* Padding to add space on smaller screens */
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   max-width: 1000px;
-  margin: 70px auto;
-  padding: 40px 20px; /* Add padding to adjust positioning */
-  flex-direction: row; /* Default: side-by-side layout */
+  height: calc(100vh - 40px); /* Full height minus header (adjust as needed) */
+  margin: 0 auto;
+  flex-direction: row;
+  padding: 20px; /* Adjust padding for spacing */
 }
 
 .image-section {
@@ -28,7 +25,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 20px;
 }
 
 .profile-image {
@@ -52,8 +48,8 @@ body {
   transition: all 0.3s ease 0s;
 }
 
-.text-section h1:hover{
-    color: #0088a9;
+.text-section h1:hover {
+  color: #0088a9;
 }
 
 .text-section p {
@@ -64,56 +60,44 @@ body {
   text-align: justify;
 }
 
-/* Media query for smaller screens (e.g., 360x800) */
+/* Header remains fixed */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #24252a; /* Ensure visibility on scroll */
+  padding: 30px 10%;
+}
+
+/* Responsive adjustments for screens 768px and smaller */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* Stack image and text vertically */
-    text-align: center; /* Center-align text */
-    padding: 10px;
+    flex-direction: column; /* Stack elements vertically */
+    height: auto; /* Allow container to shrink */
+    padding: 10px; /* Adjust padding for mobile */
+    justify-content: center; /* Center content vertically */
   }
 
   .image-section {
-    padding-right: 0;
-    padding-bottom: 20px;
+    margin-bottom: 20px; /* Add space between image and text */
   }
 
   .profile-image {
-    width: 180px; /* Reduce image size */
-    height: 180px;
-  }
-
-  .text-section {
-    padding-left: 0;
+    width: 200px; /* Reduce image size */
+    height: 200px; /* Reduce image size */
   }
 
   .text-section h1 {
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.8rem; /* Reduce heading size for mobile */
   }
 
   .text-section p {
-    font-size: 1rem;
-    text-align: center;
-  }
-}
-
-/* Media query for medium screens (e.g., 1366x768) */
-@media (min-width: 769px) and (max-width: 1366px) {
-  .container {
-    max-width: 90%; /* Adjust container width */
-    padding: 20px;
+    font-size: 1rem; /* Adjust paragraph font size for smaller screens */
   }
 
-  .profile-image {
-    width: 200px; /* Adjust image size */
-    height: 200px;
-  }
-
-  .text-section h1 {
-    font-size: 2.25rem;
-  }
-
-  .text-section p {
-    font-size: 1.05rem;
+  header {
+    padding: 20px 5%; /* Adjust header padding for smaller screens */
   }
 }
