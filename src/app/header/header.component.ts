@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
@@ -12,13 +12,7 @@ export class HeaderComponent {
   isMenuOpen = false;
   toggleIcon = 'fa-solid fa-bars';
 
-  selectedSection: string = 'front-page';
-
-  @ViewChild('front-page') frontPageSection!: ElementRef;
-  @ViewChild('projects') projectsPageSection!: ElementRef;
-  @ViewChild('education') ecucationPageSection!: ElementRef;
-  @ViewChild('experience') experiencePageSection!: ElementRef;
-  @ViewChild('contact') contactPageSection!: ElementRef;
+  constructor(private viewportScroller: ViewportScroller) {}
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
@@ -27,36 +21,11 @@ export class HeaderComponent {
       : 'fa-solid fa-bars';
   }
 
-  showSection(section: string) {
-    this.selectedSection = section;
-    this.scrollToSection(section);
-  }
-
-  scrollToSection(section: string) {
-    let target: ElementRef;
-
-    switch (section) {
-      case 'front-page':
-        target = this.frontPageSection;
-        break;
-      case 'projects':
-        target = this.projectsPageSection;
-        break;
-      case 'education':
-        target = this.ecucationPageSection;
-        break;
-      case 'experience':
-        target = this.experiencePageSection;
-        break;
-      case 'contact':
-        target = this.contactPageSection;
-        break;
-      default:
-        return;
-    }
-
-    if (target) {
-      target.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  scrollToSection(fragment: string): void {
+    this.viewportScroller.scrollToAnchor(fragment);
+    if (this.isMenuOpen) {
+      this.isMenuOpen = false;
+      this.toggleIcon = 'fa-solid fa-bars';
     }
   }
 }

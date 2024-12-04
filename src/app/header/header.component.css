@@ -1,9 +1,35 @@
-*{
-  background-color: #555;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-li{
+*{
+  background-color: #555;
+  box-sizing: border-box;
+}
+
+li {
   list-style: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+li:nth-child(4) {
+  animation-delay: 0.8s;
 }
 
 a{
@@ -19,6 +45,7 @@ a:hover{
 header{
   width: 100%;
   padding: 0 2rem;
+  position: fixed;
 }
 
 .navbar{
@@ -31,9 +58,19 @@ header{
   justify-content: space-between;
 }
 
-.navbar .logo a{
+.navbar .logo a {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #f4f4f9;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar .logo a:hover {
+  transform: scale(1.1) rotate(5deg);
+  color: #0088a9;
 }
 
 .serbia{
@@ -46,6 +83,7 @@ header{
 .navbar .links{
   display: flex;
   gap: 2rem;
+  cursor: pointer;
 }
 
 .navbar .toggle_btn{
@@ -55,7 +93,7 @@ header{
   display: none;
 }
 
-.action_btn{
+.action_btn {
   background-color: #0088a9;
   color: #f4f4f9;
   padding: 0.5rem 1rem;
@@ -65,16 +103,19 @@ header{
   font-size: 0.8rem;
   font-weight: bold;
   cursor: pointer;
-  transition: scale 0.2 ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }
 
-.action_btn:hover{
-  scale: 1.05;
+.action_btn:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 5px 15px rgba(0, 136, 169, 0.5);
   color: #f4f4f9;
+  background-color: #006d88;
 }
 
-.action_btn:active{
-  scale: 0.95;
+.action_btn:active {
+  transform: scale(0.95);
+  box-shadow: none;
 }
 
 .dropdown_menu{
@@ -129,6 +170,7 @@ header{
 
   .dropdown_menu li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
   }
 }
 

@@ -9,3 +9,7 @@
     background-color: #24252a;
     font-family: "Monserrat", sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
