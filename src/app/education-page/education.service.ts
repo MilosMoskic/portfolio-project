@@ -15,7 +15,7 @@ export class EducationService {
       location: 'Zrenjanin, Serbia',
       educationStartDate: 'October 2024',
       graduationDate: 'Present',
-      logoUrl: '././assets/tfzr.jpg',
+      logoUrl: '././assets/images/tfzr.jpg',
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ export class EducationService {
       location: 'Zrenjanin, Serbia',
       educationStartDate: 'July 2020',
       graduationDate: 'September 2024',
-      logoUrl: '././assets/tfzr.jpg',
+      logoUrl: '././assets/images/tfzr.jpg',
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ export class EducationService {
       location: 'Vršac, Serbia',
       educationStartDate: 'July 2016',
       graduationDate: 'July 2020',
-      logoUrl: '././assets/chemical-medical.jpg',
+      logoUrl: '././assets/images/chemical-medical.jpg',
     },
   ];
 

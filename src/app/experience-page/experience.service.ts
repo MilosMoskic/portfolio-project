@@ -17,7 +17,7 @@ export class ExperienceService {
       startDate: 'September, 2024',
       endDate: 'October 2024',
       description: '',
-      logoUrl: '././assets/schoolCenterNikolaTesla.jpg',
+      logoUrl: '././assets/images/schoolCenterNikolaTesla.jpg',
       inOffice: 'On-Site'
     },
     {
@@ -30,7 +30,7 @@ export class ExperienceService {
       startDate: 'May 2024',
       endDate: 'May 2024',
       description: '',
-      logoUrl: '././assets/valcon.png',
+      logoUrl: '././assets/images/valcon.png',
       inOffice: 'On-site'
     },
     {
@@ -43,7 +43,7 @@ export class ExperienceService {
       startDate: 'March 2023.',
       endDate: 'April 2024',
       description: '',
-      logoUrl: '././assets/levi9.png',
+      logoUrl: '././assets/images/levi9.png',
       inOffice: 'Hybrid'
     },
   ];

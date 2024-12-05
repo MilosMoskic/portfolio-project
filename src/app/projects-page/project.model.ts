@@ -3,5 +3,5 @@ export interface Project {
   title: string;
   description: string;
   imageUrl: string;
-  link: string; // Link to project or GitHub repo
+  link: string;
 }

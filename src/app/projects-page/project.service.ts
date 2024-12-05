@@ -12,7 +12,7 @@ export class ProjectService {
       title: 'Library API',
       description:
         "A Web Api for managing data about the library, books, authors and users' book rentals.",
-      imageUrl: '././assets/LibraryProjectAPI.webp',
+      imageUrl: '././assets/images/LibraryProjectAPI.webp',
       link: 'https://github.com/MilosMoskic/LibraryProject',
     },
     {
@@ -20,14 +20,14 @@ export class ProjectService {
       title: 'Fitness Training App',
       description:
         'A WPF app for tracking workouts, nutrition, and health progress.',
-      imageUrl: '././assets/trainingApp.png',
+      imageUrl: '././assets/images/trainingApp.png',
       link: 'https://github.com/MilosMoskic/TrainingApp',
     },
     {
       id: 3,
       title: 'Tennis Players API',
       description: 'A .NET Web API for managing tennis players data.',
-      imageUrl: '././assets/tennisPlayersAPI.png',
+      imageUrl: '././assets/images/tennisPlayersAPI.png',
       link: 'https://github.com/MilosMoskic/TennisPlayersApi',
     },
   ];
