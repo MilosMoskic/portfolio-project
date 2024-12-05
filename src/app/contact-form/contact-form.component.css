@@ -109,7 +109,7 @@ button:disabled {
   }
 
   button {
-    font-size: 1rem; /* Adjust font size for mobile */
-    padding: 12px 25px; /* Adjust button padding for mobile */
+    font-size: 1rem;
+    padding: 12px 25px;
   }
 }

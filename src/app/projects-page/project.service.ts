@@ -12,7 +12,7 @@ export class ProjectService {
       title: 'Library API',
       description:
         "A Web Api for managing data about the library, books, authors and users' book rentals.",
-      imageUrl: '././assets/libraryProjecAPI.png',
+      imageUrl: '././assets/LibraryProjectAPI.webp',
       link: 'https://github.com/MilosMoskic/LibraryProject',
     },
     {

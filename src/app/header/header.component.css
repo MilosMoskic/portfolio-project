@@ -10,7 +10,7 @@
 }
 
 *{
-  background-color: #555;
+  background-color: #6e6d6d;
   box-sizing: border-box;
 }
 
@@ -46,6 +46,9 @@ header{
   width: 100%;
   padding: 0 2rem;
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .navbar{

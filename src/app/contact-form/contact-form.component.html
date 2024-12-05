@@ -1,14 +1,12 @@
 <section id="contact">
   <div class="form-container">
-    <h2>Contact Me !</h2>
+    <h2>Feel Free to Contact Me! 😁</h2>
     <form [formGroup]="form" (ngSubmit)="send()">
 
-      <!-- Success Message -->
       <div *ngIf="emailSent" class="success-message">
         Your email has been sent successfully!
       </div>
 
-      <!-- Full Name -->
       <div class="form-group">
         <label for="name">Name</label>
         <input formControlName="from_name" type="text" placeholder="Enter your name" />
@@ -17,7 +15,6 @@
         </div>
       </div>
 
-      <!-- Email Address -->
       <div class="form-group">
         <label for="email">Email Address</label>
         <input formControlName="from_email" type="email" id="email" placeholder="Enter your email address" />
@@ -27,7 +24,6 @@
         </div>
       </div>
 
-      <!-- Subject -->
       <div class="form-group">
         <label for="subject">Subject</label>
         <input formControlName="subject" type="text" id="subject" placeholder="Enter the subject" />
@@ -36,7 +32,6 @@
         </div>
       </div>
 
-      <!-- Message -->
       <div class="form-group">
         <label for="message">Message</label>
         <textarea formControlName="message" id="message" rows="5" placeholder="Enter your message"></textarea>
