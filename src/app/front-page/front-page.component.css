@@ -3,10 +3,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Ensure body height matches viewport */
+  height: 100vh;
   background-color: #f4f4f9;
   padding: 0;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden;
 }
 
 .container {
@@ -14,10 +14,10 @@ body {
   align-items: center;
   justify-content: center;
   max-width: 1000px;
-  height: calc(100vh - 40px); /* Full height minus header (adjust as needed) */
+  height: calc(100vh - 40px);
   margin: 0 auto;
   flex-direction: row;
-  padding: 20px; /* Adjust padding for spacing */
+  padding: 20px;
 }
 
 .image-section {
@@ -38,6 +38,7 @@ body {
 .text-section {
   flex: 1;
   padding-left: 20px;
+  text-align: justify;
 }
 
 .text-section h1 {
@@ -60,44 +61,118 @@ body {
   text-align: justify;
 }
 
-/* Header remains fixed */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #24252a; /* Ensure visibility on scroll */
-  padding: 30px 10%;
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
-/* Responsive adjustments for screens 768px and smaller */
+.social-media a {
+  color: #fff; 
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+  text-shadow: 0px 0px 10px currentColor;
+}
+
+.social-media a[aria-label="LinkedIn"]:hover {
+  color: #0a66c2;
+}
+
+.social-media a[aria-label="GitHub"]:hover {
+  color: #999281;
+}
+
+.social-media a[aria-label="Twitter"]:hover {
+  color: #1da1f2;
+}
+
+.social-media a[aria-label="Instagram"]:hover {
+  color: #e4405f;
+}
+
+.social-media a[aria-label="YouTube"]:hover {
+  color: #ff0000;
+}
+
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* Stack elements vertically */
-    height: auto; /* Allow container to shrink */
-    padding: 10px; /* Adjust padding for mobile */
-    justify-content: center; /* Center content vertically */
+    flex-direction: column;
+    padding: 50px;
   }
 
   .image-section {
-    margin-bottom: 20px; /* Add space between image and text */
+    margin-bottom: 20px;
   }
 
   .profile-image {
-    width: 200px; /* Reduce image size */
-    height: 200px; /* Reduce image size */
+    width: 200px;
+    height: 200px;
+  }
+
+  .text-section {
+    text-align: center;
+    padding: 0;
   }
 
   .text-section h1 {
-    font-size: 1.8rem; /* Reduce heading size for mobile */
+    font-size: 1.8rem;
+    text-align: center;
   }
 
   .text-section p {
-    font-size: 1rem; /* Adjust paragraph font size for smaller screens */
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
   }
 
-  header {
-    padding: 20px 5%; /* Adjust header padding for smaller screens */
+  .social-media {
+    gap: 10px;
+  }
+
+  .social-media a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin-top: 50px;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .text-section {
+    text-align: center;
+    padding: 0;
+  }
+
+  .text-section h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .text-section p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+  .social-media {
+    gap: 8px;
+  }
+
+  .social-media a {
+    font-size: 1.2rem;
   }
 }
